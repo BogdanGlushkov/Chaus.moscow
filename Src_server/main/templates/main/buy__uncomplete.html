@@ -1,0 +1,24 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+ХАУС | Повторите попытку...
+{% endblock %}
+
+{% block content %}
+<section class="buy__complete__page">
+    <div class="container">
+        <div class="buy__complete__item">
+            <div class="buy__complete__header">
+                Ошибка...
+            </div>
+            <div class="buy__complete__header__2">
+                При оплате что-то пошло не так, попробуй еще раз
+            </div>
+            <img class="payment__img" src="{% static 'img/payment_unsuccessful.svg' %}" alt="">
+            <li><a class="buy__uncomplete__retry" href="{% url 'home' %}">Повторить попытку</a></li>
+            <li><a class="buy__complete__back__btn" href="{% url 'home' %}">Назад</a></li>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% load static %}
+
+
+<div class="event__buy-block">
+    <li><a class="buyt-btn" href="{% url 'buy' 0 %}">Купить билет</a></li>
+    <div class="event__price">
+        {{ event_1.price }}₽
+    </div>
+    <div class="event__price__discont">
+        <del class="event__price__discont-first">
+            {{ event_1_oldprice }}₽
+        </del>
+        <div class="event__price__discont-second">
+            выгода {{ event_1.procents }}%
+        </div>
+    </div>
+</div>

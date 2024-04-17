@@ -1,0 +1,100 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+ХАУС | Сотрудничество
+{% endblock %}
+
+{% block content %}
+<section class="coop">
+    <div class="container__contacts">
+        <div class="contacts__header__item">
+            <div class="contacts__header">
+                Сотрудничество
+            </div>
+        </div>
+        <div class="contacts__item" style="margin-bottom: 200px;">
+            <div class="coop__header__2">
+                Вакансии
+            </div>
+            <div class="vacancy__slider">
+                {% for el in jobs %}
+                <div class="vacancy__items">
+                    <div class="vacancy__item">
+                        <div class="vacancy__item__up">
+                            <div class="vacancy__item__up__left">
+                                <div class="vacancy__item__up__left__header">
+                                    {{ el.title }}
+                                </div>
+                                <div class="vacancy__item__up__left__text">
+                                    {{ el.description }}
+                                </div>
+                            </div>
+                            <div class="vacancy__item__up__right">
+                                <div class="vacancy__item__up__right__price">
+                                    {{ el.salary }}₽
+                                </div>
+                                <div class="vacancy__item__up__left__text">
+                                    {{ el.salaryDesc }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy__item__down__about">
+                            <a class="vacancy__item__down__about__btn" href="{{ el.link }}"
+                               target="_blank">
+                                <div class="vacancy__item__down__about__btn__text">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="vacancy__slider__mobile">
+                {% for el in jobs %}
+                <div class="vacancy__items">
+                    <div class="vacancy__item">
+                        <div class="vacancy__item__up">
+                            <div class="vacancy__item__up__left">
+                                <div class="vacancy__item__up__left__header">
+                                    {{ el.title }}
+                                </div>
+                                <div class="vacancy__item__up__left__text">
+                                    {{ el.description }}
+                                </div>
+                            </div>
+                            <div class="vacancy__item__up__right">
+                                <div class="vacancy__item__up__right__price">
+                                    {{ el.salary }}₽
+                                </div>
+                                <div class="vacancy__item__up__left__text">
+                                    {{ el.salaryDesc }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy__item__down__about">
+                            <a class="vacancy__item__down__about__btn" href="{{ el.link }}"
+                               target="_blank">
+                                <div class="vacancy__item__down__about__btn__text">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="coop__ad__header">Реклама, предложения и сотрудничество</div>
+            <div class="coop__ad__text">Вопросы по поводу рекламы, предложений и сотрудничества просим направлять на
+                <span>электронную почту</span>. А в заголовке письма указать интересующую тему, о которой пойдет
+                речь.
+            </div>
+            <div class="contacts__link" style="margin: 0; text-decoration: underline;"><img
+                    class="contacts__link__pht"
+                    src="{% static 'img/msg__icon.svg' %}" alt="">chausmoscow@gmail.com
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

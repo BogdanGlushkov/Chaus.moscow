@@ -1,0 +1,1099 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+ХАУС | CHAUS
+{% endblock %}
+
+{% block content %}
+<section class="hello">
+    <div class="container">
+        <div class="hello__inner">
+            <div class="hello__item">
+                <div class="hello__event">
+                    NEXT EVENT: {{event_1.data|date:"d.m.Y"}} “{{ event_1.title }}”
+                </div>
+                <div class="hello__title">
+                    CHAUS MOSCOW
+                </div>
+                <div class="hello__text">
+                    ЗАКРЫТЫЕ ТУСОВКИ В МОСКВЕ
+                </div>
+                <nav class="hello_menu">
+                    <ul>
+                        <li><a class="hello_buyt-btn">Купить билет</a></li>
+                        <li><a class="hello__photo-btn">Смотреть фото</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lending">
+    <div class="container">
+        <div class="lending__inner">
+            <div class="lending__item">
+                <div class="description__block__lending">
+                    <div class="description__textbar">
+                        <div class="description__textbar__lupa">
+                            <img src="{% static 'img/lupa.svg' %}" alt="">
+                        </div>
+                        <div class="description__textbar__lupa__mobile">
+                            <img src="{% static 'img/lupa_mobile.svg' %}" alt="">
+                        </div>
+                        <div class="description__textbar__stick">
+                            <img src="{% static 'img/stick.svg' %}" alt="">
+                        </div>
+                        <div class="description__textbar__stick__mobile">
+                            <img src="{% static 'img/stick__mobile.svg' %}" alt="">
+                        </div>
+                        <div class="description__textbar__text">
+                            <span class="typed"></span>
+                        </div>
+                    </div>
+                    <div class="description__block">
+                        <div class="description__header">
+                            Хаус
+                            <div class="description__header__lowercase">
+                                (англ. Chaos - хаос и House - дом)
+                            </div>
+                        </div>
+                        <div class="description__text">
+                            Для вас мы организовываем закрытые
+                            тусовки в Москве, нанимаем диджеев и
+                            завозим алкоголь, а потом ты можешь
+                            купить билет и тоже стать частью
+                            уникальных тусовок с самой крутой
+                            атмосферой и людьми!
+                        </div>
+                        <div class="description__button">
+                            <div class="description__button__down_arrow">
+                                <img src="{% static 'img/down_arrow.svg' %}" alt="">
+                            </div>
+                            <div class="description__button__down_arrow_mobile">
+                                <img src="{% static 'img/down_arrow_mobile.svg' %}" alt="">
+                            </div>
+                            <div class="description__button__text">
+                                Дальше - больше
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <a href="{{ links.link1 }}" target="_blank"><img src="{% static 'img/banner.png' %}" alt=""></a>
+                </div>
+                <div class="banner_mobile">
+                    <a href="{{ links.link1 }}" target="_blank"><img style="width: 320px; height: 92px;" src="{% static 'img/banner_mobile.png' %}" alt=""></a>
+                </div>
+                <div class="advantages">
+                    <div class="advantages__header" id="about">
+                        На тусовке будет
+                    </div>
+                    <div class="advantages__blocks">
+                        <div class="advantages__blocks__firstlevel">
+                            <div class="advantages__blocks__firstlevel-firstimg">
+                                <div class="advantages__blocks__firstlevel-firstimg__text">
+                                    <div class="advantages__blocks__header">
+                                        <div class="advantages__blocks__header__firstlevel">
+                                            Безлимитный алкоголь
+                                        </div>
+                                    </div>
+                                    <div class="advantages__blocks__text">
+                                        <div class="advantages__blocks__text__firstlevel">
+                                            Пей - сколько захочешь
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages__blocks__firstlevel-secondimg">
+                                <div class="advantages__blocks__firstlevel-secondimg__text">
+                                    <div class="advantages__blocks__header">
+                                        <div class="advantages__blocks__header__firstlevel">
+                                            Бесплатная пицца
+                                        </div>
+                                    </div>
+                                    <div class="advantages__blocks__text">
+                                        <div class="advantages__blocks__text__firstlevel">
+                                            Горячая и вкусная
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__block__secondlevel">
+                            <div class="advantages__blocks__header">
+                                <div class="advantages__blocks__header__secondlevel">
+                                    Команда профессионалов
+                                </div>
+                            </div>
+                            <div class="advantages__blocks__text">
+                                <div class="advantages__blocks__text__secondlevel">
+                                    Мы сделаем все, чтобы тебе было комфортно
+                                </div>
+                            </div>
+                            <div class="advantages__blocks__icons">
+                                <div class="advantages__blocks__icons__container">
+                                    <p class="advantages__icon__text__1">Качественный алкоголь</p>
+                                    <div class="advantages__icon__1">
+                                        <img src="{% static 'img/advantages__icon1.svg' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="advantages__blocks__icons__container">
+                                    <p class="advantages__icon__text__2">DJ с хорошим вкусом</p>
+                                    <div class="advantages__icon__2">
+                                        <img src="{% static 'img/advantages__icon2.svg' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="advantages__blocks__icons__container">
+                                    <p class="advantages__icon__text__3">Обученная охрана</p>
+                                    <div class="advantages__icon__3">
+                                        <img src="{% static 'img/advantages__icon3.svg' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="advantages__blocks__icons__container">
+                                    <p class="advantages__icon__text__4">Организация на уровне</p>
+                                    <div class="advantages__icon__4">
+                                        <img src="{% static 'img/advantages__icon4.svg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__blocks2">
+                        <div class="advantages__block__thirdlevel">
+                            <div class="advantages__blocks__header">
+                                <div class="advantages__blocks__header__thirdlevel">
+                                    Крутое пространство
+                                </div>
+                            </div>
+                            <div class="advantages__blocks__text">
+                                <div class="advantages__blocks__text__thirdlevel">
+                                    Мы подбираем только лучшие места для проведения тусовок
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                                    -->
+                <div class="events" id="events">
+                    <div class="events__header">
+                        Ближайшие события
+                    </div>
+                    <!--  -->
+                    <div id="tabs" class="events__blocks">
+                        <div class="events__data">
+                            <ul>
+                                <li>
+                                    <a href="#tabs-1" class="events__data__first">
+
+                                        <div class="event__data__block">
+                                            <div class="event__data__people">
+                                                {% if event_1.guest <= 200 %}
+                                                    <img src="{% static 'img/Property1=low.svg' %}" alt="">
+                                                {% elif event_1.guest > 400 %}
+                                                    <img src="{% static 'img/Property1=max.svg' %}" alt="">
+                                                {% else %}
+                                                    <img src="{% static 'img/Property1=med.svg' %}" alt="">
+                                                {% endif %}
+                                            </div>
+                                            <div class="event__data__date">{{event_1.data|date:"d.m.Y"}}</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-2" class="events__data__second">
+
+                                        <div class="event__data__block">
+                                            <div class="event__data__people">
+                                                {% if event_2.guest <= 200 %}
+                                                    <img src="{% static 'img/Property1=low.svg' %}" alt="">
+                                                {% elif event_2.guest > 400 %}
+                                                    <img src="{% static 'img/Property1=max.svg' %}" alt="">
+                                                {% else %}
+                                                    <img src="{% static 'img/Property1=med.svg' %}" alt="">
+                                                {% endif %}
+                                            </div>
+                                            <div class="event__data__date">{{event_2.data|date:"d.m.Y"}}</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-3" class="events__data__third">
+
+                                        <div class="event__data__block">
+                                            <div class="event__data__people">
+                                                {% if event_3.guest <= 200 %}
+                                                    <img src="{% static 'img/Property1=low.svg' %}" alt="">
+                                                {% elif event_3.guest > 400 %}
+                                                    <img src="{% static 'img/Property1=max.svg' %}" alt="">
+                                                {% else %}
+                                                    <img src="{% static 'img/Property1=med.svg' %}" alt="">
+                                                {% endif %}
+                                            </div>
+                                            <div class="event__data__date">{{event_3.data|date:"d.m.Y"}}</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+<!--                        &lt;!&ndash;  &ndash;&gt;-->
+                        <div id="tabs-1" class="event__description__main">
+                            <div class="events__description__1">
+                                <div class="events__description_1">
+                                    <div class="events__sticky__top">
+                                        <div class="event__description__header">
+                                            <div class="event__description__name">
+                                                {{ event_1.title }}
+                                            </div>
+                                            <div class="info__btn__1">
+                                                <li class="event__description__info__btn">
+                                                    <img src="{% static 'img/info.svg' %}" alt="">
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="event__description__data">
+                                            <div class="event__description__data-date">{{event_1.data|date:"d.m.Y"}}
+                                            </div>
+                                            <div class="event__description__data-time">{{ event_1.data.time}}
+                                            </div>
+                                        </div>
+                                        <a href="{{ event_1.place_link }}" target="_blank" class="event__place">
+                                            {{ event_1.place }}
+                                        </a>
+                                    </div>
+                                    <div class="events__sticky__bottom">
+                                        <div class="event__btn__block">
+                                            <div class="slide">
+                                                <div class="event__btn1">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__first">
+                                                            {% if event_1.guest <= 200 %}
+                                                                <img src="{% static 'img/Property1=low.svg' %}" alt="">
+                                                            {% elif event_1.guest > 400 %}
+                                                                <img src="{% static 'img/Property1=max.svg' %}" alt="">
+                                                            {% else %}
+                                                                <img src="{% static 'img/Property1=med.svg' %}" alt="">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="event__btn__first__mobile">
+                                                            {% if event_1.guest <= 200 %}
+                                                                <img src="{% static 'img/Property1=low_mobile.svg' %}" alt="">
+                                                            {% elif event_1.guest > 400 %}
+                                                                <img src="{% static 'img/Property1=max_mobile.svg' %}" alt="">
+                                                            {% else %}
+                                                                <img src="{% static 'img/Property1=med_mobile.svg' %}" alt="">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="event__btn__second">
+                                                            <div class="event__btn-f">
+                                                                {{ event_1.guest }} чел.
+                                                            </div>
+                                                            <div class="event__btn-s">
+                                                                вместимость
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slide">
+                                                <div class="event__btn2">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__first">
+                                                            <img src="{% static 'img/time.svg' %}" alt="">
+                                                        </div>
+                                                        <div class="event__btn__first__mobile">
+                                                            <img src="{% static 'img/time_mobile.svg' %}" alt="">
+                                                        </div>
+                                                        <div class="event__btn__second">
+                                                            <div class="event__btn-f">
+                                                                {{ event_1.timeDuration }} часов
+                                                            </div>
+                                                            <div class="event__btn-s">
+                                                                длительность
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slide">
+                                                <div class="event__btn3">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__long">
+                                                            <div class="event__btn-first">
+                                                                <img src="{% static 'img/dress.svg' %}" alt="">
+                                                            </div>
+                                                            <div class="event__btn-first__mobile">
+                                                                <img src="{% static 'img/dress_mobile.svg' %}" alt="">
+                                                            </div>
+                                                            <div class="event__btn__third">
+                                                                <div class="event__btn-f">
+                                                                    {{ event_1.dress_style }}
+                                                                </div>
+                                                                <div class="event__btn-s">
+                                                                    дресс-код
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% include 'main/event__buy__block__info_1.html' %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__info__1">
+                                <div class="events__description__info_1">
+                                    <div class="event__description__header__info">
+                                        <li class="event__description__info__back__1">
+                                            <img src="{% static 'img/back__arrow__info.svg' %}" class="event__description__info__back__not__mobile__1" alt="">
+                                            <img src="{% static 'img/back__arrow__info__mobile.svg' %}" class="event__description__info__back__mobile__1" alt="">
+                                        </li>
+                                        <div class="event__description__header__info__header">Подробнее</div>
+                                    </div>
+                                    <!--  -->
+                                    {% include 'main/events__description__about_1.html' %}
+                                    <!--  -->
+
+                                    <div class="event__buy__block__info">
+                                        {% include 'main/event__buy__block__info_1.html' %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!--                        &lt;!&ndash;  &ndash;&gt;-->
+
+                        <div id="tabs-2" class="event__description__main">
+                            <div class="events__description__2">
+                                <div class="events__description_2">
+                                    <div class="events__sticky__top">
+                                        <div class="event__description__header">
+                                            <div class="event__description__name">
+                                                {{ event_2.title }}
+                                            </div>
+                                            <div class="info__btn__2">
+                                                <li class="event__description__info__btn">
+                                                    <img src="{% static 'img/info.svg' %}" alt="">
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="event__description__data">
+                                            <div class="event__description__data-date">{{event_2.data|date:"d.m.Y"}}
+                                            </div>
+                                            <div class="event__description__data-time">{{ event_2.data.time}}
+                                            </div>
+                                        </div>
+                                        <a href="{{ event_2.place_link }}" target="_blank" class="event__place">
+                                            {{ event_2.place }}
+                                        </a>
+                                    </div>
+                                    <div class="events__sticky__bottom">
+                                        <div class="event__btn__block">
+                                            <div class="slide">
+                                                <div class="event__btn1">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__first">
+                                                            {% if event_2.guest <= 200 %}
+                                                                <img src="{% static 'img/Property1=low.svg' %}" alt="">
+                                                            {% elif event_2.guest > 400 %}
+                                                                <img src="{% static 'img/Property1=max.svg' %}" alt="">
+                                                            {% else %}
+                                                                <img src="{% static 'img/Property1=med.svg' %}" alt="">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="event__btn__first__mobile">
+                                                            {% if event_2.guest <= 200 %}
+                                                                <img src="{% static 'img/Property1=low_mobile.svg' %}" alt="">
+                                                            {% elif event_2.guest > 400 %}
+                                                                <img src="{% static 'img/Property1=max_mobile.svg' %}" alt="">
+                                                            {% else %}
+                                                                <img src="{% static 'img/Property1=med_mobile.svg' %}" alt="">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="event__btn__second">
+                                                            <div class="event__btn-f">
+                                                                {{ event_2.guest }} чел.
+                                                            </div>
+                                                            <div class="event__btn-s">
+                                                                вместимость
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slide">
+                                                <div class="event__btn2">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__first">
+                                                            <img src="{% static 'img/time.svg' %}" alt="">
+                                                        </div>
+                                                        <div class="event__btn__first__mobile">
+                                                            <img src="{% static 'img/time_mobile.svg' %}" alt="">
+                                                        </div>
+                                                        <div class="event__btn__second">
+                                                            <div class="event__btn-f">
+                                                                {{ event_2.timeDuration }} часов
+                                                            </div>
+                                                            <div class="event__btn-s">
+                                                                длительность
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slide">
+                                                <div class="event__btn3">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__long">
+                                                            <div class="event__btn-first">
+                                                                <img src="{% static 'img/dress.svg' %}" alt="">
+                                                            </div>
+                                                            <div class="event__btn-first__mobile">
+                                                                <img src="{% static 'img/dress_mobile.svg' %}" alt="">
+                                                            </div>
+                                                            <div class="event__btn__third">
+                                                                <div class="event__btn-f">
+                                                                    {{ event_2.dress_style }}
+                                                                </div>
+                                                                <div class="event__btn-s">
+                                                                    дресс-код
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% include 'main/event__buy__block__info_2.html' %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__info__2">
+                                <div class="events__description__info_2">
+                                    <div class="event__description__header__info">
+                                        <li class="event__description__info__back__2">
+                                            <img src="{% static 'img/back__arrow__info.svg' %}" class="event__description__info__back__not__mobile__1" alt="">
+                                            <img src="{% static 'img/back__arrow__info__mobile.svg' %}" class="event__description__info__back__mobile__1" alt="">
+                                        </li>
+                                        <div class="event__description__header__info__header">Подробнее</div>
+                                    </div>
+                                    <!--  -->
+                                    {% include 'main/events__description__about_2.html' %}
+                                    <!--  -->
+
+                                    <div class="event__buy__block__info">
+                                        {% include 'main/event__buy__block__info_2.html' %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+<!--                        &lt;!&ndash;  &ndash;&gt;-->
+                        <div id="tabs-3" class="event__description__main">
+                            <div class="events__description__3">
+                                <div class="events__description_3">
+                                    <div class="events__sticky__top">
+                                        <div class="event__description__header">
+                                            <div class="event__description__name">
+                                                {{ event_3.title }}
+                                            </div>
+                                            <div class="info__btn__3">
+                                                <li class="event__description__info__btn">
+                                                    <img src="{% static 'img/info.svg' %}" alt="">
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="event__description__data">
+                                            <div class="event__description__data-date">{{event_3.data|date:"d.m.Y"}}
+                                            </div>
+                                            <div class="event__description__data-time">{{ event_3.data.time}}
+                                            </div>
+                                        </div>
+                                        <a href="{{ event_3.place_link }}" target="_blank" class="event__place">
+                                            {{ event_3.place }}
+                                        </a>
+                                    </div>
+                                    <div class="events__sticky__bottom">
+                                        <div class="event__btn__block">
+                                            <div class="slide">
+                                                <div class="event__btn1">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__first">
+                                                            {% if event_3.guest <= 200 %}
+                                                                <img src="{% static 'img/Property1=low.svg' %}" alt="">
+                                                            {% elif event_3.guest > 400 %}
+                                                                <img src="{% static 'img/Property1=max.svg' %}" alt="">
+                                                            {% else %}
+                                                                <img src="{% static 'img/Property1=med.svg' %}" alt="">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="event__btn__first__mobile">
+                                                            {% if event_3.guest <= 200 %}
+                                                                <img src="{% static 'img/Property1=low_mobile.svg' %}" alt="">
+                                                            {% elif event_3.guest > 400 %}
+                                                                <img src="{% static 'img/Property1=max_mobile.svg' %}" alt="">
+                                                            {% else %}
+                                                                <img src="{% static 'img/Property1=med_mobile.svg' %}" alt="">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="event__btn__second">
+                                                            <div class="event__btn-f">
+                                                                {{ event_3.guest }} чел.
+                                                            </div>
+                                                            <div class="event__btn-s">
+                                                                вместимость
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slide">
+                                                <div class="event__btn2">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__first">
+                                                            <img src="{% static 'img/time.svg' %}" alt="">
+                                                        </div>
+                                                        <div class="event__btn__first__mobile">
+                                                            <img src="{% static 'img/time_mobile.svg' %}" alt="">
+                                                        </div>
+                                                        <div class="event__btn__second">
+                                                            <div class="event__btn-f">
+                                                                {{ event_3.timeDuration }} часов
+                                                            </div>
+                                                            <div class="event__btn-s">
+                                                                длительность
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slide">
+                                                <div class="event__btn3">
+                                                    <div class="event__btn">
+                                                        <div class="event__btn__long">
+                                                            <div class="event__btn-first">
+                                                                <img src="{% static 'img/dress.svg' %}" alt="">
+                                                            </div>
+                                                            <div class="event__btn-first__mobile">
+                                                                <img src="{% static 'img/dress_mobile.svg' %}" alt="">
+                                                            </div>
+                                                            <div class="event__btn__third">
+                                                                <div class="event__btn-f">
+                                                                    {{ event_3.dress_style }}
+                                                                </div>
+                                                                <div class="event__btn-s">
+                                                                    дресс-код
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% include 'main/event__buy__block__info_3.html' %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__info__3">
+                                <div class="events__description__info_3">
+                                    <div class="event__description__header__info">
+                                        <li class="event__description__info__back__3">
+                                            <img src="{% static 'img/back__arrow__info.svg' %}" class="event__description__info__back__not__mobile__1" alt="">
+                                            <img src="{% static 'img/back__arrow__info__mobile.svg' %}" class="event__description__info__back__mobile__1" alt="">
+                                        </li>
+                                        <div class="event__description__header__info__header">Подробнее</div>
+                                    </div>
+                                    <!--  -->
+                                    {% include 'main/events__description__about_3.html' %}
+                                    <!--  -->
+
+                                    <div class="event__buy__block__info">
+                                        {% include 'main/event__buy__block__info_3.html' %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chat__inner">
+                <div class="chat__item">
+                    <div class="chat__first__msg">
+                        <div class="chat__right__text">
+                            Привет! У меня есть пара вопросиков...
+                        </div>
+                        <div class="chat__avatar__people">
+                            <img src="{% static 'img/memoji.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="chat__second__msg">
+                        <div class="chat__left__text">
+                            <p>
+                                Привет! А я для тебя тут собрал ответы на
+                                частые вопросы.
+                                <span>
+                                    Но если не нашлось то, что
+                                    хотелось узнать, то смело пиши в любой
+                                    мессенджер из <a href="{% url 'contacts' %}">контактов</a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat__third__msg">
+                        <div class="chat__avatar__house">
+                            <img src="{% static 'img/house__chat.svg' %}" alt="">
+                        </div>
+
+                        <div class="chat__left__accordion">
+                            <ul>
+                                <li class="msg__btn__1">
+                                    <div class="msg__btn__style">
+                                        <p> А прям 18+?</p>
+                                        <div class="msg__btn__style__arrow">
+                                            <img src="{% static 'img/down_arrow.svg' %}" alt="" class="msg__btn__style__arrow_tablet">
+                                            <img src="{% static 'img/down_arrow_for_mobile.svg' %}" alt="" class="msg__btn__style__arrow_mobile">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="msg__btn__2">
+                                    <div class="msg__btn__style">
+                                        <p> Нужно как-то подготовиться?</p>
+                                        <div class="msg__btn__style__arrow">
+                                            <img src="{% static 'img/down_arrow.svg' %}" alt="" class="msg__btn__style__arrow_tablet">
+                                            <img src="{% static 'img/down_arrow_for_mobile.svg' %}" alt="" class="msg__btn__style__arrow_mobile">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="msg__btn__3">
+                                    <div class="msg__btn__style">
+                                        <p>Что можно брать с собой?</p>
+                                       <div class="msg__btn__style__arrow">
+                                            <img src="{% static 'img/down_arrow.svg' %}" alt="" class="msg__btn__style__arrow_tablet">
+                                            <img src="{% static 'img/down_arrow_for_mobile.svg' %}" alt="" class="msg__btn__style__arrow_mobile">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="msg__btn__4">
+                                    <div class="msg__btn__style">
+                                        <p>Есть скидки?</p>
+                                        <div class="msg__btn__style__arrow">
+                                            <img src="{% static 'img/down_arrow.svg' %}" alt="" class="msg__btn__style__arrow_tablet">
+                                            <img src="{% static 'img/down_arrow_for_mobile.svg' %}" alt="" class="msg__btn__style__arrow_mobile">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="msg__btn__5">
+                                    <div class="msg__btn__style">
+                                        <p>Что можно и нельзя делать?</p>
+                                        <div class="msg__btn__style__arrow">
+                                            <img src="{% static 'img/down_arrow.svg' %}" alt="" class="msg__btn__style__arrow_tablet">
+                                            <img src="{% static 'img/down_arrow_for_mobile.svg' %}" alt="" class="msg__btn__style__arrow_mobile">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="msg__btn__6">
+                                    <div class="msg__btn__style">
+                                        <p>Нужно за что-то еще платить?</p>
+                                        <div class="msg__btn__style__arrow">
+                                            <img src="{% static 'img/down_arrow.svg' %}" alt="" class="msg__btn__style__arrow_tablet">
+                                            <img src="{% static 'img/down_arrow_for_mobile.svg' %}" alt="" class="msg__btn__style__arrow_mobile">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="block-1">
+                                <div class="msg__block">
+                                    <div class="msg__block__header">
+                                        <h4>А прям 18+?</h4>
+                                        <li class="msg__btn__back"><img src="{% static 'img/down_arrow.svg' %}" alt="">
+                                        </li>
+                                    </div>
+                                    <div class="msg__text__main">
+                                        <p>Да, если ты младше, то билет лучше не покупать. При
+                                            входе на тусовку
+                                            тебя
+                                            не
+                                            пустит охрана, а деньги за него за 2 недели до
+                                            мероприятия вернуть
+                                            не
+                                            получится.
+                                        </p>
+                                        <p> На тусовке присутствует алкоголь и мы не имеем права
+                                            пускать кого-либо
+                                            младше 18 лет. С этим все строго.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-2">
+                                <div class="msg__block">
+                                    <div class="msg__block__header">
+                                        <h4>Нужно как-то подготовиться?</h4>
+                                        <li class="msg__btn__back"><img src="{% static 'img/down_arrow.svg' %}" alt="">
+                                        </li>
+                                    </div>
+                                    <div class="msg__text__main">
+                                        <p>
+                                            Единственное, к чему нужно подготовиться, кроме хорошего настроения
+                                            -
+                                            это:
+                                        </p>
+                                        <br>
+                                        <p>-оригинал удостоверения личности (фотки не принимаем)</p>
+                                        <p>-соблюдать более-менее приличный дресс-код</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-3">
+                                <div class="msg__block">
+                                    <div class="msg__block__header">
+                                        <h4>Что можно брать с собой?</h4>
+                                        <li class="msg__btn__back"><img src="{% static 'img/down_arrow.svg' %}" alt="">
+                                        </li>
+                                    </div>
+                                    <div class="msg__text__main">
+                                        <p>
+                                            Все, что не запрещено далее:
+                                        </p>
+                                        <br>
+                                        <p> -любые напитки</p>
+                                        <p>-оружие (даже перцовки)</p>
+                                        <p> -запрещенные вещества</p>
+                                        <br>
+                                        <p>
+                                            А лучше еще не брать то, что может сильно дорого стоить и
+                                            спровоцировать других гостей.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-4">
+                                <div class="msg__block">
+                                    <div class="msg__block__header">
+                                        <h4>Есть скидки?</h4>
+                                        <li class="msg__btn__back"><img src="{% static 'img/down_arrow.svg' %}" alt="">
+                                        </li>
+                                    </div>
+                                    <div class="msg__text__main">
+                                        <p>
+                                            Еще как!
+                                        </p>
+                                        <br>
+                                        <p>
+                                            Следи за нашими соц.сетями и там ты точно найдешь промокод, который
+                                            сделает твое мини-приключение дешевле.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-5">
+                                <div class="msg__block">
+                                    <div class="msg__block__header">
+                                        <h4>Что можно и нельзя делать?</h4>
+                                        <li class="msg__btn__back"><img src="{% static 'img/down_arrow.svg' %}" alt="">
+                                        </li>
+                                    </div>
+                                    <div class="msg__text__main">
+                                        <p>
+                                            Можно все, что не запрещено ниже:
+                                        </p>
+                                        <br>
+                                        <p>-драться, провоцировать конфликты</p>
+                                        <p>-портить имущество</p>
+                                        <p>-курить в помещениях</p>
+                                        <p>-вести себя уж слишком откровенно</p>
+                                        <br>
+                                        <p>
+                                            А остальное все можно, но лучше прочитай
+                                            <a href="{% url 'rules' %}">правила</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-6">
+                                <div class="msg__block">
+                                    <div class="msg__block__header">
+                                        <h4>Нужно за что-то еще платить?</h4>
+                                        <li class="msg__btn__back"><img src="{% static 'img/down_arrow.svg' %}" alt="">
+                                        </li>
+                                    </div>
+                                    <div class="msg__text__main">
+                                        <p>Нет, не нужно, прям ни копейки.</p>
+                                        <br>
+                                        <p>
+                                            В стоимость билета уже все включено, так что,
+                                            можешь не париться на этот счет. Все схвачено.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat__fourth__msg">
+                        <div class="chat__right__text">
+                            Обалдеть, как ты сделал такое сообщение?
+                            <div class="chat__right__text__emoji_mobile">&#128559;&#128559;&#128559;</div>
+                            <div class="chat__right__text__emoji">
+                                <img class="chat__emoji_tablet" src="{% static 'img/wow__chat.svg' %}" alt="">
+                                <img class="chat__emoji_tablet" src="{% static 'img/wow__chat.svg' %}" alt="">
+                                <img class="chat__emoji_tablet" src="{% static 'img/wow__chat.svg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat__fifth__msg">
+                        <div class="chat__right__text" style="display: flex;">
+                            Но информация полезная, спасибо <div class="chat__emoji_mobile" style="margin-left: 4px;">&#128150;</div>
+                            <img class="chat__emoji_tablet" src="{% static 'img/heart__chat.svg' %}" alt=""
+                                 style="margin-left: 10px;">
+                        </div>
+                        <div class="chat__avatar__people">
+                            <img src="{% static 'img/memoji.svg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lending__item">
+            <div class="photo">
+                <div class="photo__header" id="photo">
+                    Фото с тусовок
+                </div>
+                <div class="photo__level">
+                    <a href="{{ photo_1.link_Album }}" class="photo__level__first__1" style="">
+                        <h4>{{ photo_1.title }}</h4>
+                        <p>{{ photo_1.data|date:"d.m.Y" }}</p>
+                    </a>
+                    <div class="photo__level__first__2">
+                        <div class="photo__level__first__2__1">
+                                <div class="photo__2__1"><img src="{% static 'img/photo__block__2.png' %}" alt=""></div>
+                                <div class="photo__2__2"><img src="{% static 'img/photo__block__3.png' %}" alt=""></div>
+                        </div>
+                        <div class="photo__level__first__2__2">
+                            <div class="photo__2__3"><img src="{% static 'img/photo__block__4.png' %}" alt=""></div>
+                            <a href="photo_1.link_Album" class="photo__2__4">
+                                <h4>+{{ photo_1.count }} фото</h4>
+                            </a>
+                            <a href="photo_1.link_Album" class="photo__2__4_mobile">
+                                <h4>Смотреть</h4>
+                                <h4>+{{ photo_1.count }} фото</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo__level">
+                    <div class="photo__level__second__1">
+                        <div class="photo__level__second__1__1">
+                            <div class="photo__2__1"><img src="{% static 'img/photo__block__6.png' %}" alt=""></div>
+                            <div class="photo__2__2"><img src="{% static 'img/photo__block__7.png' %}" alt=""></div>
+                        </div>
+                        <div class="photo__level__second__1__2">
+                            <div class="photo__2__3"><img src="{% static 'img/photo__block__8.png' %}" alt=""></div>
+                           <a href="photo_2.link_Album" class="photo__2__9">
+                                <h4>+{{ photo_2.count }} фото</h4>
+                            </a>
+                            <a href="photo_2.link_Album" class="photo__2__9_mobile">
+                                <h4>Смотреть</h4>
+                                <h4>+{{ photo_2.count }} фото</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="photo_2.link_Album" class="photo__level__second__2">
+                        <h4>{{ photo_2.title }}</h4>
+                        <p>{{ photo_2.data|date:"d.m.Y" }}</p>
+                    </a>
+                </div>
+            </div>
+            <div class="buy__our__tickets">
+                <div class="buy__our__tickets__header" id="buy">
+                    Купить билет
+                </div>
+                <div class="slider__buy__justify">
+
+                    <div class="buy__our__tickets__slider">
+                        <div class="slide">
+                            <div class="buy__our__tickets__block__first">
+                                <div class="buy__our__tickets__block__left">
+                                    <div class="buy__our__tickets__block__header">
+                                        {{ event_1.title }}
+                                    </div>
+                                    <div class="buy__our__tickets__block__date">
+                                        {{event_1.data|date:"d"}} {% include 'main/monthNamed_1.html'%}{{ event_1.data.time }}
+                                    </div>
+                                    <a href="{{ event_1.place_link }}" target="_blank"
+                                       class="buy__our__tickets__block__place">
+                                        {{ event_1.place }}
+                                    </a>
+                                    <div class="buy__our__tickets__block__age">
+                                        +18
+                                    </div>
+                                    <div class="buy__our__tickets__block__buy__btn__block">
+                                        <li>
+                                            <a class="buy__our__tickets__block__buy__btn" href="{% url 'buy' 0 %}">Купить</a>
+                                            <a class="buy__our__tickets__block__buy__btn_mobile" href="{% url 'buy' 0 %}">Купить билет</a>
+                                        </li>
+                                        <div class="buy__our__tickets__block__ticket__price">{{ event_1.price }}₽</div>
+
+                                        <div class="buy__our__tickets__block__ticket__available">
+                                            <div class="buy__our__tickets__block__ticket__available__text">
+                                                <div class="buy__our__tickets__block__ticket__available__text__main">
+                                                    Осталось:
+                                                </div>
+                                                <div id="bar__status_1"
+                                                     class="buy__our__tickets__block__ticket__available__text__int">
+                                                    <span>0</span>
+                                                </div>
+                                            </div>
+                                            <progress id="bar_1" value="1" max="{{ event_1.guest }}"><span>0</span>%</progress>
+                                        </div>
+                                    </div>
+                                    <div class="buy__our__tickets__block__bottom" style="left: 20px;">
+                                        NEXT EVENT
+                                    </div>
+                                </div>
+                                <div class="buy__our__tickets__block__right">
+                                    <div class="buy__our__tickets__block__next__event__date">
+                                        <h1>{{event_2.data|date:"d.m"}}</h1>
+                                        <h2>{{ event_2.data.year }}</h2>
+                                        <h3>{{ event_2.data.time }}</h3>
+                                        <h4>MSC</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="buy__our__tickets__block__first">
+                                <div class="buy__our__tickets__block__left">
+                                    <div class="buy__our__tickets__block__header">
+                                        {{ event_2.title }}
+                                    </div>
+                                    <div class="buy__our__tickets__block__date">
+                                        {{event_2.data|date:"d"}} {% include 'main/monthNamed_2.html'%}{{ event_2.data.time }}
+                                    </div>
+                                    <a href="{{ event_1.place_link }}" target="_blank"
+                                       class="buy__our__tickets__block__place">
+                                        {{ event_2.place }}
+                                    </a>
+                                    <div class="buy__our__tickets__block__age">
+                                        +18
+                                    </div>
+                                    <div class="buy__our__tickets__block__buy__btn__block">
+                                        <li>
+                                            <a class="buy__our__tickets__block__buy__btn" href="{% url 'buy' 1 %}">Купить</a>
+                                            <a class="buy__our__tickets__block__buy__btn_mobile" href="{% url 'buy' 1 %}">Купить билет</a>
+                                        </li>
+                                        <div class="buy__our__tickets__block__ticket__price">{{ event_2.price }}₽</div>
+
+                                        <div class="buy__our__tickets__block__ticket__available">
+                                            <div class="buy__our__tickets__block__ticket__available__text">
+                                                <div class="buy__our__tickets__block__ticket__available__text__main">
+                                                    Осталось:
+                                                </div>
+                                                <div id="bar__status_2"
+                                                     class="buy__our__tickets__block__ticket__available__text__int">
+                                                    <span>{{ event_2.guest }}</span>
+                                                </div>
+                                            </div>
+                                            <progress id="bar_2" value="{{ event_2.guest }}" max="{{ event_2.guest }}"><span>0</span>%</progress>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buy__our__tickets__block__right">
+                                    <div class="buy__our__tickets__block__next__event__date">
+                                        <h1>{{ event_3.data|date:"d.m"}}</h1>
+                                        <h2>{{ event_3.data.year }}</h2>
+                                        <h3>{{ event_3.data.time }}</h3>
+                                        <h4>MSC</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="buy__our__tickets__block__first">
+                                <div class="buy__our__tickets__block__left">
+                                    <div class="buy__our__tickets__block__header">
+                                        {{ event_3.title }}
+                                    </div>
+                                    <div class="buy__our__tickets__block__date">
+                                        {{event_3.data|date:"d"}} {% include 'main/monthNamed_3.html'%}{{ event_3.data.time }}
+                                    </div>
+                                    <a href="{{ event_1.place_link }}" target="_blank"
+                                       class="buy__our__tickets__block__place">
+                                        {{ event_3.place }}
+                                    </a>
+                                    <div class="buy__our__tickets__block__age">
+                                        +18
+                                    </div>
+                                    <div class="buy__our__tickets__block__buy__btn__block">
+                                        <li>
+                                            <a class="buy__our__tickets__block__buy__btn" href="{% url 'buy' 2 %}">Купить</a>
+                                            <a class="buy__our__tickets__block__buy__btn_mobile" href="{% url 'buy' 2 %}">Купить билет</a>
+                                        </li>
+                                        <div class="buy__our__tickets__block__ticket__price">{{ event_3.price }}₽</div>
+
+                                        <div class="buy__our__tickets__block__ticket__available">
+                                            <div class="buy__our__tickets__block__ticket__available__text">
+                                                <div class="buy__our__tickets__block__ticket__available__text__main">
+                                                    Осталось:
+                                                </div>
+                                                <div id="bar__status_3"
+                                                     class="buy__our__tickets__block__ticket__available__text__int">
+                                                    <span>{{ event_3.guest }}</span>
+                                                </div>
+                                            </div>
+                                            <progress id="bar_3" value="{{ event_3.guest }}" max="{{ event_3.guest }}"><span>0</span>%</progress>
+                                        </div>
+                                    </div>
+                                    <div class="buy__our__tickets__block__bottom" style="right: 20px;">
+                                        PREV EVENT
+                                    </div>
+                                </div>
+                                <div class="buy__our__tickets__block__right">
+                                    <div class="buy__our__tickets__block__next__event__date">
+                                        <h1>{{event_4.data|date:"d.m"}}</h1>
+                                        <h2>{{ event_4.data.year }}</h2>
+                                        <h3>{{ event_4.data.time }}</h3>
+                                        <h4>MSC</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="follow__us">
+                <div class="follow__us__header">
+                    Подпишись на нас
+                </div>
+                <div class="follow__links">
+                    <div class="follow__btn__block">
+                        {% include 'main/social_networks_btn.html' %}
+                    </div>
+                    <a class="phone" href="{{ links.link2 }}">
+                        <img style="width: 124px; height: 187px;" src="{% static 'img/phone.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <a class="notebook" href="{{ links.link2 }}">
+                <img src="{% static 'img/notebook.png' %}" alt="">
+            </a>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

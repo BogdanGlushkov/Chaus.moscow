@@ -1,0 +1,52 @@
+{% extends 'main/base.html'%}
+
+{% load static %}
+
+
+{% block title %}
+ХАУС | Контакты
+{% endblock %}
+
+{% block content %}
+<section class="contacts">
+    <div class="container__contacts">
+        <div class="contacts__header__item">
+            <div class="contacts__header">
+                Контакты
+            </div>
+        </div>
+        <div class="contacts__item">
+            <div class="contacts__header__2">
+                Блоги в социальных сетях
+            </div>
+            <div class="follow__btn__block__rules">
+               {% include 'main/social_networks_btn.html'%}
+            </div>
+            <div class="contacts__header__2">
+                Связаться напрямую
+            </div>
+            <div class="contacts__links">
+                <div class="contacts__link"><img class="contacts__link__pht" src="{% static 'img/tg__icon.svg' %}" alt=""><a href="https://t.me/chausmoscowme" target="_blank">chausmoscowme</a></div>
+<!--                <div class="contacts__link"><img class="contacts__link__pht" src="{% static 'img/vk__icon.svg' %}" alt=""><a href="https://www.vk.com/chausmoscow" target="_blank">chausmoscowme</a></div>-->
+                <div class="contacts__link"><img class="contacts__link__pht" src="{% static 'img/msg__icon.svg' %}" alt="">chausmoscow@gmail.com</div>
+<!--                <div class="contacts__link"><img class="contacts__link__pht" src="{% static 'img/tel__icon.svg' %}" alt=""><a href="tel:+ 79048420198">+7(999)999-99-99</a></div>-->
+            </div>
+            <div class="contacts__header__2">
+                Юридическая информация
+            </div>
+            <div class="contacts__ib__info">
+                <p>ИП Петренев Семён Даниилович</p>
+                <p>ИНН: 590522112726</p>
+                <p>ОГРН: 323508100234335</p>
+            </div>
+            <div class="contacts__header__2">
+                Вопросы и предложения
+            </div>
+            <div class="contacts__qa">
+                Все вопросы и предложения просим направлять на <span>электронную почту</span>, указанную выше. А в заголовке
+                письма указать интересующую тему, о которой пойдет речь.
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

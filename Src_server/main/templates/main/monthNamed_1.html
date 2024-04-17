@@ -1,0 +1,25 @@
+{% if event_1.data.month == 1 %}
+    ЯНВАРЯ,
+{% elif event_1.data.month == 2 %}
+    ФЕВРАЛЯ,
+{% elif event_1.data.month == 3 %}
+    МАРТА,
+{% elif event_1.data.month == 4 %}
+    АПРЕЛЯ,
+{% elif event_1.data.month == 5 %}
+    МАЯ,
+{% elif event_1.data.month == 6 %}
+    ИЮНЯ,
+{% elif event_1.data.month == 7 %}
+    ИЮЛЯ,
+{% elif event_1.data.month == 8 %}
+    АВГУСТА,
+{% elif event_1.data.month == 9 %}
+    СЕНТЯБРЯ,
+{% elif event_1.data.month == 10 %}
+    ОКТЯБРЯ,
+{% elif event_1.data.month == 11 %}
+    НОЯБРЯ,
+{% else %}
+    ДЕКАБРЯ,
+{% endif %}

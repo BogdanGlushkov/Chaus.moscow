@@ -1,0 +1,25 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+ХАУС | Оплата успешна!
+{% endblock %}
+
+{% block content %}
+<section class="buy__complete__page">
+    <div class="container_mobile">
+        <div class="container">
+            <div class="buy__complete__item">
+                <div class="buy__complete__header">
+                    Успешно!
+                </div>
+                <div class="buy__complete__header__2">
+                    Билет скоро придет на твою почту
+                </div>
+                <img class="payment__img" src="{% static 'img/payment_successful.svg' %}" alt="">
+                <li><a class="buy__complete__back__btn" href="{% url 'home' %}">Назад</a></li>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

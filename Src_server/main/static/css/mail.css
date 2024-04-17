@@ -1,0 +1,51 @@
+* {  
+    box-sizing: border-box;
+}
+
+.mail_ticket_container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.mail_ticket_items{
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 400;   
+    font-family: Tahoma; 
+    line-height: normal; 
+}
+.mail_ticket_header_h1 {
+    color: black;
+    font-size: 32px;
+    font-weight: 700; 
+}
+.mail_ticket_header_h4 {
+    margin-top: 10px;  
+    font-size: 20px;
+}
+.mail_ticket_open_btn {
+    border-radius: 10px;
+    background: #CB0B0B; 
+    padding: 16px 0px;
+    font-size: 24px;
+    font-weight: 700; 
+    margin-top: 20px;
+}
+.mail_ticket_photo {
+    margin: 20px 0 40px 0;
+    width: 560px;
+    height: 270px;
+}
+.mail_ticket_warning {
+    margin-bottom: 20px;
+}
+.mail_ticket_warning_text {
+    font-size: 24px;
+    font-weight: 700; 
+}
+.mail_ticket_follow_us_block {
+    margin: 40px 0 40px 0;
+}
+.mail_ticket_no-reply{
+    font-size: 14px; 
+}

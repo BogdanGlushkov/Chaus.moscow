@@ -1,0 +1,11 @@
+LfMwE3=:AXp9
+
+cd /home/django/django_venv
+
+source bin/activate
+
+cd src
+
+python manage.py collectstatic
+
+touch django_project.wsgi 

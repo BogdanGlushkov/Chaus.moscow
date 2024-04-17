@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {% static 'css/mail.css' %}">
+</head>
+<body>
+    <div class="mail_ticket_container">
+        <img src="{% static 'img/logo_ticket.svg' %}" alt="">
+        <div class="mail_ticket_items">
+            <div class="mail_ticket_header_h1">
+                Спасибо за покупку билета!
+            </div> 
+            <div class="mail_ticket_header_h4">
+                Кликни ниже по кнопке, чтобы посмотреть билет в развернутом виде
+            </div> 
+            <a href="{{ ticket_link }}" style="text-decoration: none;"><div class="mail_ticket_open_btn" style="color: white; text-decoration: none;">
+                Открыть билет   
+            </div></a>
+            <div class="mail_ticket_photo">
+                some picture
+            </div>
+            <div class="mail_ticket_warning">
+                some picture #2
+            </div>
+            <div class="mail_ticket_warning_text">
+                Никому не показывай свой билет и QR-код!
+            </div>
+            <div class="mail_ticket_follow_us_block">
+                Следи за нашими новостями!
+                {% include 'main/social_networks_btn.html'%} 
+            </div>
+            <div class="mail_ticket_no-reply">
+                Это автоматическое письмо с билетом просит вас поступить по-традиционному сценарию и промолчать. Наши серверы никак не смогут обработать ваш ответ. Просто приходите на вечеринку и отожгите!
+            </div>
+        </div>
+              
+    </div>     
+</body>
+</html>

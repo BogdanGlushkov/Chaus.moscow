@@ -1,0 +1,130 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+ХАУС | Правила
+{% endblock %}
+
+{% block content %}
+    <section class="rules">
+        <div class="container__rules">
+            <div class="rules__item__header">
+                <div class="rules__header">
+                    Правила
+                </div>
+                <div class="rules__header__under">
+                    На наших тусовках есть правила. Их нужно придерживаться. Подробно они описаны в <a href="{% url 'documents' %}">документе</a>, который
+                    ты
+                    подписываешь, когда покупаешь билет
+                </div>
+            </div>
+            <div class="rules__item__main">
+                <div class="rules__left" style="margin-top: 40px;">
+                    <div class="rules__img__left">
+                        <img class="rules__img__mobile_1" src="{% static 'img/rules__1.png' %}" alt="">
+                    </div>
+
+                    <div class="rules__text__left">
+                        <div class="rules__text__left__header">
+                            Строго 18+
+                        </div>
+
+                        <div class="rules__text__left__main">
+                            <p> Как бы нам не хотелось, мы, к сожалению, не можем пускать гостей младше 18 лет.</p>
+                            Поэтому, возьми с собой паспорт или водительские права, охрана на входе будет проверять
+                            документы и без них не сможет тебя пустить. (фотка паспорта НЕ годится, знаем мы вас)
+                        </div>
+                    </div>
+                </div>
+                <div class="rules__right">
+                    <div class="rules__text__right">
+                        <div class="rules__text__right__header">
+                            Без напитков
+                        </div>
+                        <div class="rules__text__right__main">
+                            <p> Увы, мы не сможем пустить вас с напитками, даже с обычной водой.</p>
+                            Чтобы не потерять напитки впустую, заранее не бери их с собой, у нас все есть :)
+                        </div>
+                    </div>
+                    <div class="rules__img__right">
+                        <img class="rules__img__mobile_2" src="{% static 'img/rules__2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="rules__left">
+                    <div class="rules__img__left">
+                        <img class="rules__img__mobile_3" src="{% static 'img/rules__3.png' %}" alt="">
+                    </div>
+
+                    <div class="rules__text__left">
+                        <div class="rules__text__left__header">
+                            Без сигарет
+                        </div>
+                        <div class="rules__text__left__main">
+                            <p>Далеко не на всех площадках можно курить и чтобы не было неприятностей, на территории курить нельзя.</p>
+                            Даже электронки, а вот за территорией - пожалуйста, никто не против. Береги свое здоровье
+                        </div>
+                    </div>
+                </div>
+                <div class="rules__right">
+                    <div class="rules__text__right">
+                        <div class="rules__text__right__header">
+                            Наркотикам - нет
+                        </div>
+                        <div class="rules__text__right__main">
+                            <p>Мы думаем, тут и объяснять ничего не нужно. Наркотики категорически запрещены. Не только нами, даже всем Российским законодательством</p>
+
+                        </div>
+                    </div>
+                    <div class="rules__img__right">
+                        <img class="rules__img__mobile_4" src="{% static 'img/rules__4.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="rules__left">
+                    <div class="rules__img__left">
+                        <img class="rules__img__mobile_5" src="{% static 'img/rules__5.png' %}" alt="">
+                    </div>
+
+                    <div class="rules__text__left">
+                        <div class="rules__text__left__header">
+                            Оружие тоже нельзя
+                        </div>
+                        <div class="rules__text__left__main">
+                            <p>Мы все понимаем и обеими руками за вашу безопасность. Но перед посещением лучше оставь перцовку, шокер и ракетную установку дома.</p>
+                            У нас есть профессиональная охрана, которая поможет и защитит любого
+                        </div>
+                    </div>
+                </div>
+                <div class="rules__right">
+                    <div class="rules__text__right">
+                        <div class="rules__text__right__header">
+                            Не груби
+                        </div>
+                        <div class="rules__text__right__main">
+                            <p>Мы тут все вежливые люди и выпиваем культурно) Будь вежлив и ты с гостями и организаторами.</p>
+                            Получай кайф от тусовки, знакомься с новыми людьми и просто будь собой
+                        </div>
+                    </div>
+                    <div class="rules__img__right">
+                        <img class="rules__img__mobile_6" src="{% static 'img/rules__6.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="rules__left" style="margin-bottom: 180px;">
+                    <div class="rules__img__left">
+                        <img class="rules__img__mobile_7" src="{% static 'img/rules__7.png' %}" alt="">
+                    </div>
+
+                    <div class="rules__text__left">
+                        <div class="rules__text__left__header">
+                            Относись бережно
+                        </div>
+                        <div class="rules__text__left__main">
+                            <p>Старайся ничего не разбить и не сломать, ведь другие люди приходят тоже получить удовольствие. А за испорченное имущество придется заплатить. Нам ооочень не хочется ни с кого ничего требовать. </p>
+                            Просто будь аккуратнее и относись к вещам на площадке, как к своим
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </section>
+{% endblock %}

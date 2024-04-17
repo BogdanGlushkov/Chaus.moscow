@@ -1,0 +1,18 @@
+{% load static %}
+
+
+{% if eventLinks %}
+    {% for link in eventLinks %}
+        {% if link.event == event_2 %}
+            <div class="events__description__info__about">
+                <div class="events__description__info__smile">
+                    <img src="{% static 'img/monster.png' %}" alt="">
+                </div>
+                <div class="events__description__info__smile__mobile">
+                    <img src="{% static 'img/monster__mobile.png' %}" alt="">
+                </div>
+                <div class="events__description__info__text">{{ link.title }}</div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}

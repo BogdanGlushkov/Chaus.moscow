@@ -1,0 +1,128 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+ХАУС | Покупка билета
+{% endblock %}
+
+{% block content %}
+<section class="buy__page">
+    <div class="container__buy">
+        <div class="buy__header__item">
+            <div class="buy__header">
+                Купить билет
+            </div>
+        </div>
+        <div class="buy__item">
+            <div class="buy__header__2">
+                {{ event_1.title }} {{event_1.data|date:"d.m"}} {{ event_1.data.time }}
+            </div>
+            <form name="TinkoffPayForm" action="{% url 'TinkoffPayInit' %}" method="POST">
+                {% csrf_token %}
+                <input class="tinkoffPayRow" type="hidden" placeholder="Event" name="event"
+                       value="{{ event_1.id }}"
+                       readonly="readonly">
+                <input class="tinkoffPayRow" type="hidden" placeholder="Описание заказа" name="description"
+                       value="Билет {{ event_1.title }} {{event_1.data|date:'d.m'}} {{ event_1.data.time }}"
+                       readonly="readonly">
+                <div class="buy__imput__block">
+                    <div class="buy__imput__block__name">
+                        <div class="buy__imput__block__text">
+                            ФИО*
+                        </div>
+                        <input class="buy__imput__block__input__large" type="text" id="name"
+                               placeholder="Иванов Владимир Петрович" aria-label="Иванов Владимир Петрович"
+                               minlength="1"
+                               maxlength="255" name="name" required>
+                    </div>
+                    <div class="buy__imput__block__mail">
+                        <div class="buy__imput__block__text">
+                            E-mail*
+                        </div>
+                        <input class="buy__imput__block__input__large" type="email" placeholder="example@exmail.com"
+                               name="email" id="email" aria-label="example@exmail.com" required minlength="1"
+                               maxlength="255">
+                    </div>
+                    <div class="buy__imput__block__phone">
+                        <div class="buy__imput__block__text">
+                            Телефон*
+                        </div>
+                        <div class="buy__input__block__grouped">
+                            <input class="buy__imput__block__phone__number" readonly="readonly" value="+7">
+                            <input class="buy__imput__block__input__small" type="tel" placeholder="(900)000 00 00"
+                                   aria-label="(900)000 00 00" name="phone" id="phone" minlength="10" maxlength="10" required>
+                        </div>
+                        <div class="buy__imput__block__text__2">
+                            Надоедливых рассылок не будет, обещаем
+                        </div>
+                    </div>
+                    <div class="buy__imput__block__promo">
+                        <div class="buy__imput__block__text">
+                            Промокод
+                        </div>
+                        <input class="buy__imput__block__input__small" type="text" id="promo" name="promo"
+                               placeholder="XMPL20" aria-label="XMPL20">
+                    </div>
+                </div>
+                <div class="buy__submit__block">
+                    <div class="buy__submit__button">
+                        <div class="buy__submit__block__price">
+                            {{ event_1.price }}₽
+                        </div>
+                        <button class="buyt-btn" type="submit" style="margin: 0 18px; cursor: pointer;">
+                            Оплатить
+                        </button>
+                    </div>
+
+            </form>
+
+            <div class="buy__submit__block__text">
+                <p>Нажимая кнопку “Оплатить”, вы даете <a href="{% url 'documents' %}">согласие на обработку </a><a
+                        href="{% url 'documents' %}">персональных данных </a>
+                    и соглашаетесь с <a href="{% url 'documents' %}">правилами</a> <a href="{% url 'documents' %}">
+                        проведения мероприятия</a> и даете согласие на рассылку SMS оповещений.
+                </p>
+            </div>
+        </div>
+        <img class="buy__alert__banner" src="{% static 'img/alert.png' %}" alt="">
+        <img class="buy__alert__banner__mobile" style="width: 320px; height: 95px;"
+             src="{% static 'img/alert_mobile.png' %}" alt="">
+        <div class="buy__ticket__main">
+            <div class="buy__our__tickets__block__left">
+                <div class="buy__our__tickets__block__header">
+                    {{ event_1.title }}
+                </div>
+                <div class="buy__our__tickets__block__date">
+                    {{event_1.data|date:"d"}} {% include 'main/monthNamed_1.html'%}{{ event_1.data.time }}
+                </div>
+                <a href="{{ event_1.place_link }}" target="_blank" class="buy__our__tickets__block__place"
+                   tabindex="0">
+                    {{ event_1.place }}
+                </a>
+                <div class="buy__our__tickets__block__buy__btn__block">
+                    <div class="buy__our__tickets__block__ticket">
+                        <div class="buy__our__tickets__block__ticket__age">+18</div>
+                        <div class="buy__our__tickets__block__ticket__price">{{ event_1.price }}₽</div>
+                        <div class="buy__our__tickets__block__ticket__available">
+                            <div class="buy__our__tickets__block__ticket__available__text">
+                                <div class="buy__our__tickets__block__ticket__available__text__main">
+                                    Осталось:
+                                </div>
+                                <div id="bar__status_1"
+                                     class="buy__our__tickets__block__ticket__available__text__int">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <progress id="bar_1" value="1" max="{{ event_1.guest }}"><span>0</span>%</progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buy__alert__text">
+            *Поля обязательные для заполнения
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

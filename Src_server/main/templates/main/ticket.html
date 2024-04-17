@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketChaus</title>
+    <link rel="stylesheet" href="{% static 'css/ticket.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ticket_media.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="background">
+        <div class="ticket-left">
+            <div class="ticket_left_padding">
+                <div class="ticket_left_header">
+                    <img class="ticket_left_header_img" src="{% static 'img/logo_ticket.svg' %}" alt="" style="height: 90px; width: 142px;">
+                    <img class="ticket_left_header_img_mobile" src="{% static 'img/logo_ticket.svg' %}" alt="" style="height: 30px; width: 47px;">
+                </div>
+                <div class="ticket-text_h1">{{ event_title }}</div>
+                <div class="ticket-text_h2">{{ event_datatime }}</div>
+                <div class="ticket-text_h4">{{event_place}}</div>
+                <div class="ticket-text_h3">{{guest_name}}</div>
+                <div class="ticket-text_h3_light">{{ amount }}₽</div>
+                <div class="ticket-text_h2_bottom">+18</div>
+                <div class="ticket__btn__block">
+                    <div class="ticket__btn">
+                        <img class="ticket__btn__icon__people" src="{% static 'img/persnum.svg' %}" alt="">
+                        <div class="ticket__btn__text">
+                            <div class="ticket__btn__text__top">
+                                {{ event_guest }} чел.
+                            </div>
+                            <div class="ticket__btn__text__bottom">
+                                вместимость
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket__btn">
+                        <img class="ticket__btn__icon__time" src="{% static 'img/time_ticket.svg' %}" alt="">
+                        <div class="ticket__btn__text">
+                            <div class="ticket__btn__text__top">
+                                {{event_timeDuration}} часов
+                            </div>
+                            <div class="ticket__btn__text__bottom">
+                                длительность
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket__btn">
+                        <img class="ticket__btn__icon__dress" src="{% static 'img/dc.svg' %}" alt="">
+                        <div class="ticket__btn__text">
+                            <div class="ticket__btn__text__top">
+                                {{event_dress_style}}
+                            </div>
+                            <div class="ticket__btn__text__bottom">
+                                Дресс-код
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ticket-right">
+        <div class="bottom_text_left">
+            НЕ ЗАБУДЬ ВЗЯТЬ С СОБОЙ ПАСПОРТ
+        </div>
+        <div class="bottom_text_right">
+            НИКОМУ НЕ ПОКАЗЫВАЙ СВОЙ БИЛЕТ!
+        </div>
+        <div class="ticket-right-bg">
+            <div class="qr_code_block">
+                <div class="qr_code_block_inside">
+                    {{qr_code | safe}}
+                    <div class="qr_code_block_inside_text">
+                        <div class="qr_code_block_inside_text_h1">
+                            Проходной билет
+                        </div>
+                        <div class="qr_code_block_inside_text_h2">
+                            #{{payment_number}}
+                        </div>
+                        <div class="qr_code_block_inside_text_h3_light">
+                            chaus.moscow
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

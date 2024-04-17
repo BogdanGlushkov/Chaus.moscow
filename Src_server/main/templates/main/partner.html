@@ -1,0 +1,33 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+ХАУС | Партнёры
+{% endblock %}
+
+{% block content %}
+    <section class="partner">
+        <div class="container__contacts">
+            <div class="contacts__header__item">
+                <div class="contacts__header">
+                    Партнеры
+                </div>
+            </div>
+            <div class="contacts__item" style="margin-bottom: 200px;">
+                {% for el in partner %}
+                <div class="docs__item">
+                    <div class="docs__item__left">
+                        <img class="partner__item__svg" src="{% static 'img/partner__hands.svg' %}" alt="">
+                        <div class="docs__item__name">{{ el.title }}</div>
+                    </div>
+                    <div class="docs__item__right">
+                        <!-- link on file -->
+                        <a class="docs__item_download_mobile" href="{{ el.link }}" target="_blank"><img src="{% static 'img/link__mobile.svg' %}"></a>
+                        <a class="docs__item_download" href="{{ el.link }}" target="_blank">Перейти на сайт</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

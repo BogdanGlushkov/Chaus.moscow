@@ -1,0 +1,170 @@
+@media (max-width: 430px) {
+    .background {
+
+        font-family: Montserrat;
+        font-style: normal;
+        margin: 0 auto;
+        width: auto;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .ticket_left_header_img_mobile {
+        display: block;
+    }
+    .ticket_left_header_img {
+        display: none;
+    }
+
+    .ticket-left {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 320px;
+        text-align: left;
+        color: #000;
+        margin: 0 auto;
+    }
+
+    .ticket_left_padding {
+        padding: 10px 20px 0 20px;
+    }
+
+    .ticket_left_header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ticket-right {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .ticket-text_h1 {
+        margin-top: 10px;
+        width: 320px;
+        font-size: 26px;
+    }
+
+    .ticket-text_h2 {
+        margin: 7px 0px;
+        font-size: 24px;
+    }
+
+    .ticket-text_h2_bottom {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    .ticket-text_h3 {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .ticket-text_h3_light {
+        font-size: 18px;
+        margin-top: 7px;
+    }
+
+    .ticket-text_h4 {
+        width: 320px;
+        font-size: 16px;
+    }
+
+    .ticket__btn {
+        border-radius: 6px;
+        margin-right: 4px;
+        flex-direction: row;
+    }
+
+    .ticket__btn__block {
+        margin-top: 10px;
+    }
+
+    .ticket__btn__text {
+        padding: 8px 18px 8px 10px;
+    }
+
+    .ticket__btn__text__top {
+        font-size: 9px;
+        line-height: 75%;
+    }
+
+    .ticket__btn__text__bottom {
+        font-size: 6px;
+        line-height: 100%;
+    }
+
+    .ticket__btn__icon__people {
+        padding-left: 10px;
+        height: 14px;
+    }
+
+    .ticket__btn__icon__time {
+        padding-left: 10px;
+        height: 15px;
+    }
+
+    .ticket__btn__icon__dress {
+        padding-left: 10px;
+        height: 14px;
+    }
+
+    .bottom_text_left {
+        height: 20px;
+        font-size: 13px;
+        margin-top: 10px;
+        width: 430px;
+    }
+
+    .bottom_text_right {
+        height: 20px;
+        font-size: 13px;
+        width: 430px;
+    }
+
+    .ticket-right-bg {
+        display: flex;
+        justify-content: center;
+        width: 430px;
+    }
+
+    .qr_code_block {
+        border-radius: 8px;
+        margin: 10px 0px 20px;
+        width: 226px;
+        height: 253px;
+    }
+
+    .qr_code_block_inside {
+        padding: 20px 36px 5px;
+    }
+
+    .qr_code_block_inside_text_h1 {
+        margin-top: 19px;
+        font-size: 16px;
+    }
+
+    .qr_code_block_inside_text_h2 {
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+    .qr_code_block_inside_text_h3_light {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .qr_code_ticket {
+        width: 146px;
+        height: 146px;
+    }
+}
